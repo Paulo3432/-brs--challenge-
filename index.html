@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="tr">HELLO WORD</h1>
+    <style>
+        .container {
+            display: flex;
+            gap: .4rem;
+            box-shadow: none;
+            flood-color: black;
+
+        }
+
+        li img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+    </style>
+    <div id="container"></div>
+    <script src="index.js">
+        //console.log("foi");
+        (async () => {
+
+
+            const response = await fetch('texto.json');
+            const date = await response.json();
+
+            const htmlList = date
+                .map(({ elem })=>`<li><text"${elem}"</li>`);
+        //console. log(elements. join(${src}));
+        console. log(elements. join());
+            console.log(htmlList);
+            document.querySelector('.container').innerHTML = htmlList;
+
+
+
+
+
+        })</script>
+
+    
+</body>
+
+</html>
